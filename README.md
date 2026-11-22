@@ -1,6 +1,6 @@
 # Minhas Tarefas
 
-Aplicativo Android da P2 de Programação Mobile. Inclui cadastro e login por e-mail, painel de totais, organização de tarefas pessoais e tema claro ou escuro.
+Aplicativo Android da P2 de Programação para dispositivos móveis. Inclui cadastro e login por e-mail, painel de totais, organização de tarefas pessoais e tema claro ou escuro.
 
 ## Executar no VS Code
 
