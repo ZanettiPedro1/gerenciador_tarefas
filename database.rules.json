@@ -1,0 +1,19 @@
+{
+  "rules": {
+    "tarefas": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid",
+        "$id": {
+          ".validate": "newData.hasChildren(['titulo', 'descricao', 'vencimento', 'prioridade', 'concluida'])",
+          "titulo": { ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 120" },
+          "descricao": { ".validate": "newData.isString() && newData.val().length <= 2000" },
+          "vencimento": { ".validate": "newData.isString() && newData.val().matches(/^\\d{4}-\\d{2}-\\d{2}$/)" },
+          "prioridade": { ".validate": "newData.val() === 'baixa' || newData.val() === 'media' || newData.val() === 'alta'" },
+          "concluida": { ".validate": "newData.isBoolean()" },
+          "$outro": { ".validate": false }
+        }
+      }
+    }
+  }
+}
